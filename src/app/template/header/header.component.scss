@@ -1,0 +1,30 @@
+header {
+  max-width: 1140px;
+  width: 800px;
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+      max-width: 600px;
+      width: 400px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      li {
+        display: block;
+        list-style: none;
+      }
+    }
+
+    input {
+      max-width: 150px;
+      height: 100%;
+    }
+  }
+}

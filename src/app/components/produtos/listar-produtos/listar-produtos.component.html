@@ -1,1 +1,34 @@
-<p>listar-produtos works!</p>
+<div>
+
+  <h1>Listar Produtos</h1>
+  <button type="button" routerLink="/produtos/cadastrar"> Cadastrar</button>
+</div>
+<div class="content">
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nome</th>
+        <th>Validade</th>
+        <th>Valor</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prod of listaProdutos">
+        <th>{{prod.idProduto}}</th>
+        <th>{{prod.nome}}</th>
+        <th>{{prod.validade | date:"shortDate"}}</th>
+        <th>{{prod.precoProduto | currency: "BRL"}}</th>
+        <th>
+          <button>
+            E
+          </button>
+          <button>
+            D
+          </button>
+        </th>
+      </tr>
+    </tbody>
+  </table>
+</div>

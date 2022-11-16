@@ -1,1 +1,35 @@
-<p>cadastrar-produto works!</p>
+<h1>Cadastrar Produto</h1>
+<div class="card">
+  <form>
+    <div class="row">
+      <div class="formgroup">
+        <label for="nome">Nome do Produto</label>
+        <input type="text" name="nomeProduto" [(ngModel)]="nomeProduto" placeholder="Digite nome do produto" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="formgroup">
+        <label for="validade">Validade</label>
+        <input type="date" name="nomeProduto" [(ngModel)]="validade" placeholder="validade" />
+      </div>
+
+      <div class="formgroup">
+        <label for="preco">preço</label>
+        <input type="number" name="preco" [(ngModel)]="preco" placeholder="0.00" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <button routerLink="/produtos"> Voltar</button>
+        <button (click)="salvarProduto()"> Salvar</button>
+      </div>
+    </div>
+
+
+  </form>
+  {{nomeProduto}}
+  {{preco}}
+  {{validade}}
+</div>

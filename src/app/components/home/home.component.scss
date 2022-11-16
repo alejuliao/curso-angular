@@ -1,0 +1,19 @@
+.card {
+  max-width: 300px;
+  border: 1px solid #f1f1f1;
+
+  img {
+    max-width: 100%;
+  }
+
+  .card-body {
+    width: 90%;
+
+
+    a {
+      display: flex;
+      justify-content: end;
+      left: 0;
+    }
+  }
+}

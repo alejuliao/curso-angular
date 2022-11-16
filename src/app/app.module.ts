@@ -10,6 +10,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListarProdutosComponent } from './components/produtos/listar-produtos/listar-produtos.component';
 import { CadastrarProdutoComponent } from './components/produtos/cadastrar-produto/cadastrar-produto.component';
 
+import { LOCALE_ID } from '@angular/core';
+import localePt from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { SharedModule } from './shared/shared.module';
+
+import { HttpClientModule } from '@angular/common/http'
+
+registerLocaleData(localePt)
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,9 +32,14 @@ import { CadastrarProdutoComponent } from './components/produtos/cadastrar-produ
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    SharedModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'pt-BR' },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

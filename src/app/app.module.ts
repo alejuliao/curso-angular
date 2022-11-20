@@ -16,7 +16,8 @@ import { registerLocaleData } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
 
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { AtualizarProdutoComponent } from './components/produtos/atualizar-produto/atualizar-produto.component'
 
 registerLocaleData(localePt)
 
@@ -28,6 +29,7 @@ registerLocaleData(localePt)
     HeaderComponent,
     ListarProdutosComponent,
     CadastrarProdutoComponent,
+    AtualizarProdutoComponent,
   ],
   imports: [
     BrowserModule,

@@ -36,5 +36,9 @@ export class ListarProdutosComponent implements OnInit {
       this.listaProdutos = retorno
     })
   }
+  deletar(produto: IProduto): void {
+    this.produtoService.excluir(produto.id).subscribe();
+    this.carregarProdutos();
+  }
 
 }

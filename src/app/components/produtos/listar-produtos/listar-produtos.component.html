@@ -16,15 +16,15 @@
     </thead>
     <tbody>
       <tr *ngFor="let prod of listaProdutos">
-        <th>{{prod.idProduto}}</th>
+        <th>{{prod.id}}</th>
         <th>{{prod.nome}}</th>
         <th>{{prod.validade | date:"shortDate"}}</th>
-        <th>{{prod.precoProduto | currency: "BRL"}}</th>
+        <th>{{prod.preco | currency: "BRL"}}</th>
         <th>
-          <button>
+          <button routerLink="/produtos/atualizar/{{prod.id}}">
             E
           </button>
-          <button>
+          <button (click)="deletar(prod)">
             D
           </button>
         </th>

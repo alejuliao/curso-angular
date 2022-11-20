@@ -13,5 +13,18 @@ export class ProdutosService {
   buscarTodos(): Observable<IProduto[]> {
     return this.http.get<IProduto[]>(this.URL);
   }
+  cadastrar(produto: IProduto): Observable<IProduto> {
+    return this.http.post<IProduto>(this.URL, produto)
+  }
 
+
+  buscarPorId(id: number): Observable<IProduto> {
+    return this.http.get<IProduto>(`${this.URL}/${id}`);
+  }
+  atualizar(produto: IProduto): Observable<IProduto> {
+    return this.http.put<IProduto>(`${this.URL}/${produto.id}`, produto)
+  }
+  excluir(id: any): Observable<any> {
+    return this.http.delete<any>(`${this.URL}/${id}`)
+  }
 }
